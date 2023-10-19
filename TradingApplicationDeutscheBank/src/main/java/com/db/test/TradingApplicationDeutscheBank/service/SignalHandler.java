@@ -1,4 +1,4 @@
-package com.TradingApplicationDeutscheBank.db.service;
+package com.db.test.TradingApplicationDeutscheBank.service;
 
 /**
  * This is an upcall from our trading system, and we cannot change it.

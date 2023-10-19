@@ -1,6 +1,7 @@
-package com.TradingApplicationDeutscheBank.db.Controllers;
+package com.db.test.TradingApplicationDeutscheBank.Controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/trading")
 public class TradingController {
 
-    @GetMapping("/signal")
-    public void process(int id)
+    @GetMapping("/signal/{id}")
+    public void processSignal(@PathVariable("id") int id)
     {
-
+        System.out.println("Hello");
     }
 }

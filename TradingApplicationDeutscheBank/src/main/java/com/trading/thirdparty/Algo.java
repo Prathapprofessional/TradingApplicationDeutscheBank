@@ -1,4 +1,4 @@
-package com.TradingApplicationDeutscheBank.trading.thirdparty;
+package com.trading.thirdparty;
 
 /**
  * This is implemented in a third-party library and we cannot change it
