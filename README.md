@@ -8,11 +8,11 @@
 
 #Ideally Databases has to be used to store the data and retreive, here the json files are used to store and retreive data.
 
-#The URL is http://localhost:8080/trading/signal/1 where the last integer refers to the signal. Here the scenario of signals 1 2 and 3 alone are considered and all other signals are considers as DEFAULT (As per given).
+#The example local URL is http://localhost:8080/trading/signal/1 where the last integer refers to the signal. Here the scenario of signals 1 2 and 3 alone are considered and all other signals are considered as DEFAULT (As per given).
 
-#Signal information retreived from the JIRA tickets
+#Signal information was retreived from the JIRA tickets (Given).
 
-#No front end display messages are popped up as per the requirement. Only the console performs and prints the data as per the code from neighbouring team. Data is also read from the console for testing purpose.
+#No front end display messages are popped up as per the requirement. Only the console performs and prints the data as per the code, from third party library-ALGO. This data is only read from the console for testing purpose.
 
 #unit testing was performed and the result was successful.
 
