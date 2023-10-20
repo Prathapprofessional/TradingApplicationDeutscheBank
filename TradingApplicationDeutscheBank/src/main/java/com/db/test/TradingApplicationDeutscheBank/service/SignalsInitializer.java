@@ -20,11 +20,11 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import static com.db.test.TradingApplicationDeutscheBank.domain.ActionConstants.*;
-public class SignalInitializer {
+public class SignalsInitializer {
 
     private static final Map<Integer, Signal> signalsMap= new HashMap<>();
     private static boolean isInitialized = false;
-    public void init() throws IOException, URISyntaxException {
+    public void init()  {
         if(isInitialized)
         {return;
         }
@@ -34,7 +34,6 @@ public class SignalInitializer {
         signalFiles=getSignalFilesUnderResourcesFolder();
         final ObjectMapper mapper = new ObjectMapper();
         for(Path signalFile: signalFiles){
-
             TypeReference<HashMap<String, Object>> typeRef = new TypeReference<>() { };
             Map<String, Object> signalMap = mapper.readValue(signalFile.toFile(), typeRef);
             checkIsFieldIsPresent(signalMap.get(SIGNAL_ID),SIGNAL_ID,Integer.class, signalFile.getFileName());
