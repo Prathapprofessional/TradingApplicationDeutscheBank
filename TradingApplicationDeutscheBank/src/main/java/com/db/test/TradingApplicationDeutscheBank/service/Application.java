@@ -5,7 +5,7 @@ import com.trading.thirdparty.Algo;
 /**
  * This is your team’s code and should be changed as you see fit.
  */
-class Application implements SignalHandler {
+public class Application implements SignalHandler {
     public void handleSignal(int signal) {
         Algo algo = new Algo();
 
