@@ -34,6 +34,7 @@ public class Application implements SignalHandler {
             List<Action> actions  = signal.getActions();
             for (Action action : actions)
             {
+                //Switch case performing the functionalities new version altered from given
                 switch(action.getActionType()){
                     case SETUP:
                         algo.setUp();

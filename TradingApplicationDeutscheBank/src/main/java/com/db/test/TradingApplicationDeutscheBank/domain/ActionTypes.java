@@ -1,5 +1,5 @@
 package com.db.test.TradingApplicationDeutscheBank.domain;
-
+//Enum of Actions to be performed
 public enum ActionTypes {
     SETUP,
     SET_ALGO_PARAM,

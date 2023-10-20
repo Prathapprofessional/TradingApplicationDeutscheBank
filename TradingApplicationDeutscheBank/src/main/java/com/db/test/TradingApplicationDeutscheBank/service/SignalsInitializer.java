@@ -4,9 +4,8 @@ import com.db.test.TradingApplicationDeutscheBank.domain.Action;
 import com.db.test.TradingApplicationDeutscheBank.domain.ActionConstants;
 import com.db.test.TradingApplicationDeutscheBank.domain.ActionTypes;
 import com.db.test.TradingApplicationDeutscheBank.domain.Signal;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.type.TypeReference;
-
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -74,11 +73,11 @@ public class SignalsInitializer {
     }
     private Action handleActionSetAlgoParam(Map<String, Object>actionData, Path fileName){
       if(!actionData.containsKey(ActionConstants.ACTION_TYPE_SET_ALGO_PARAM_PARAM_1_NAME)|| !actionData.containsKey(ActionConstants.ACTION_TYPE_SET_ALGO_PARAM_PARAM_2_NAME))
-        {throw new RuntimeException(ActionConstants.ACTION_TYPE_SET_ALGO_PARAM_PARAM_1_NAME + " and " + ActionConstants.ACTION_TYPE_SET_ALGO_PARAM_PARAM_1_NAME +
+        {throw new RuntimeException(ActionConstants.ACTION_TYPE_SET_ALGO_PARAM_PARAM_1_NAME + " and " + ActionConstants.ACTION_TYPE_SET_ALGO_PARAM_PARAM_2_NAME +
                 "are mandatory for SET_ALGO_PARAM action. Please check the signal file " + fileName);}
 
       if(!(actionData.get(ActionConstants.ACTION_TYPE_SET_ALGO_PARAM_PARAM_1_NAME) instanceof Integer) || !(actionData.get(ActionConstants.ACTION_TYPE_SET_ALGO_PARAM_PARAM_2_NAME)instanceof Integer))
-        {throw new RuntimeException(ActionConstants.ACTION_TYPE_SET_ALGO_PARAM_PARAM_1_NAME + " and " + ActionConstants.ACTION_TYPE_SET_ALGO_PARAM_PARAM_1_NAME +
+        {throw new RuntimeException(ActionConstants.ACTION_TYPE_SET_ALGO_PARAM_PARAM_1_NAME + " and " + ActionConstants.ACTION_TYPE_SET_ALGO_PARAM_PARAM_2_NAME +
                 " must be of type Integer for SET_ALGO_PARAM action. Please check the signal file " + fileName);}
 
       Action action = new Action(ActionTypes.SET_ALGO_PARAM);
@@ -87,7 +86,7 @@ public class SignalsInitializer {
         return action;
     }
 
-    private List<Path> getSignalFilesUnderResourcesFolder() throws IOException, URISyntaxException {
+    List<Path> getSignalFilesUnderResourcesFolder() throws IOException, URISyntaxException {
 
     //returns the Path objests as a list that represents the files in resources/signals source path
         return Files.walk(Paths.get(getClass().getResource("/signals source path").toURI())).filter(Files::isRegularFile).filter(file->file.getFileName().toString().endsWith(".json")).collect(Collectors.toList());

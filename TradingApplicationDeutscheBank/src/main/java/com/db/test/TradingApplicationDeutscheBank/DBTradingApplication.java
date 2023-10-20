@@ -7,5 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DBTradingApplication {
 		public static void main (String[]args){
 		SpringApplication.run(DBTradingApplication.class, args);
+		System.out.println("Welcome to Deutsche Bank Trading Application");
 	}
 }
