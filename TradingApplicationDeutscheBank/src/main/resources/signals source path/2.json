@@ -1,0 +1,17 @@
+{
+  "SignalId": 2,
+  "Actions": [
+    {
+      "ActionType": "REVERSE"
+    },
+    {
+      "ActionType": "SET_ALGO_PARAM",
+      "Param": 1,
+      "Value": 80
+    },
+    {
+      "ActionType": "SUBMIT_TO_MARKET",
+      "_comment": "Optional comment to add any additional information in future"
+    }
+  ]
+}

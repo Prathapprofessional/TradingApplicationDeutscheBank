@@ -1,0 +1,22 @@
+{
+  "SignalId": 3,
+  "Actions": [
+    {
+      "ActionType": "SET_ALGO_PARAM",
+      "Param": 1,
+      "Value": 90
+    },
+    {
+      "ActionType": "SET_ALGO_PARAM",
+      "Param": 2,
+      "Value": 15
+    },
+    {
+      "ActionType": "PERFORM_CALC"
+    },
+    {
+      "ActionType": "SUBMIT_TO_MARKET",
+      "_comment": "Optional comment to add any additional information in future"
+    }
+  ]
+}
